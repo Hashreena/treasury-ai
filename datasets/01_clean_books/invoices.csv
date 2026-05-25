@@ -1,0 +1,6 @@
+id,vendor,amount,currency,reference,date
+INV-1001,Hanseatic Steel GmbH,4200.0,EUR,PO-1001,2026-07-01
+INV-1002,Brightwave Software,1800.0,USD,PO-1002,2026-07-02
+INV-1003,Tokyo Print Works,560000,JPY,PO-1003,2026-07-03
+INV-1004,Cedar Office Supplies,740.0,USD,PO-1004,2026-07-04
+INV-1005,Nordic Cloud Hosting,1200.0,EUR,PO-1005,2026-07-05

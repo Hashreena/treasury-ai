@@ -1,0 +1,6 @@
+id,vendor,amount,currency,reference,date
+INV-1101,Shenzhen Components Ltd,12480.0,USD,PO-1101,2026-07-01
+INV-1102,Shenzhen Components Ltd,12480.0,USD,PO-1101,2026-07-02
+INV-1103,Aurora Design Studio,6300.0,GBP,PO-1103,2026-07-03
+INV-1104,Quartz Marketing FZE,18900.0,USD,,2026-07-04
+INV-1105,Pinewood Catering,430.0,USD,PO-1105,2026-07-05

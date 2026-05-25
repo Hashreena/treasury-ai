@@ -1,0 +1,7 @@
+id,vendor,amount,currency,reference,date
+INV-1601,Meridian Trading Co,2400.0,USD,PO-1601,2026-07-01
+INV-1602,Meridian Trading Co,2400.0,USD,PO-1601,2026-07-02
+INV-1603,Apex Consulting,1900.0,USD,PO-1603,2026-07-03
+INV-1604,Blackstone Holdings,95000.0,USD,,2026-07-04
+INV-1605,Riverside Supplies,680.0,USD,PO-1605,2026-07-05
+INV-1606,Apex Consulting,1900.0,USD,PO-1603,2026-07-06

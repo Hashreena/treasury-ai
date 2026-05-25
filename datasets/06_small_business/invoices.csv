@@ -1,0 +1,5 @@
+id,vendor,amount,currency,reference,date
+INV-1501,Joe's Coffee Roasters,380.0,USD,PO-1501,2026-07-01
+INV-1502,Citywide Internet,90.0,USD,PO-1502,2026-07-02
+INV-1503,Fresh Linen Supply,215.0,USD,PO-1503,2026-07-03
+INV-1504,Downtown Accounting,1100.0,USD,PO-1504,2026-07-04

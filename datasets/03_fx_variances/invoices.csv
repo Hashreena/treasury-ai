@@ -1,0 +1,6 @@
+id,vendor,amount,currency,reference,date
+INV-1201,Lyon Logistics SARL,5000.0,EUR,PO-1201,2026-07-01
+INV-1202,Mumbai Textiles Pvt,340000,INR,PO-1202,2026-07-02
+INV-1203,Berlin Analytics,2700.0,EUR,PO-1203,2026-07-03
+INV-1204,Sydney Freight Co,8800.0,AUD,PO-1204,2026-07-04
+INV-1205,Oslo Consulting AS,3600.0,EUR,PO-1205,2026-07-05
