@@ -13,6 +13,24 @@ and generates a professional PDF audit report.
 
 ---
 
+## ⚠️ Note for Judges / Reviewers
+
+**The application runs fully without an API key.** Reconciliation,
+fraud detection, the dashboard, the PDF audit report, and scan history
+all work with no key required.
+
+The **AI explanation** and **AI copilot** features use a built-in
+**deterministic fallback** unless a Chutes AI key is supplied — they
+still return correct, data-grounded results (you will see a small
+"offline mode" label on AI responses). This is by design, not a bug.
+
+To enable the **live AI** experience (Chutes AI / DeepSeek), set the
+`CHUTES_API_KEY` environment variable before running — see *Running
+the app* below. **The key is provided separately in our submission
+notes**, for security (it is intentionally not stored in this repo).
+
+---
+
 ## Features
 
 - **Smart Document Upload** — CSV, Excel and digital PDF
@@ -31,7 +49,7 @@ and generates a professional PDF audit report.
 
 - **Backend:** Python 3.11+, FastAPI
 - **Frontend:** single-file HTML / CSS / JavaScript (no framework)
-- **AI:** Chutes AI (large language model) with deterministic fallback
+- **AI:** Chutes AI (DeepSeek V3.2) with deterministic fallback
 - **Libraries:** uvicorn, openpyxl, pdfplumber, reportlab
 
 ---
@@ -62,12 +80,16 @@ python -m pip install -r requirements.txt
 
 ## Running the app — EVERY time
 
-Set the three environment variables, then start the server, **in the
-same terminal window**.
+The app runs **with or without** an API key (see the note for judges
+above). To run with **live AI**, set the three environment variables,
+then start the server, **in the same terminal window**.
+
+To run **without** a key (offline fallback), simply skip the three
+`CHUTES_...` lines and just run the final `uvicorn` command.
 
 ### Windows (PowerShell)
 ```
-$env:CHUTES_API_KEY = "<ask the team for the key>"
+$env:CHUTES_API_KEY = "<provided in our submission notes>"
 $env:CHUTES_API_URL = "https://llm.chutes.ai/v1/chat/completions"
 $env:CHUTES_MODEL = "deepseek-ai/DeepSeek-V3.2-TEE"
 python -m uvicorn app.main:app --reload
@@ -75,7 +97,7 @@ python -m uvicorn app.main:app --reload
 
 ### Mac / Linux (Terminal)
 ```
-export CHUTES_API_KEY="<ask the team for the key>"
+export CHUTES_API_KEY="<provided in our submission notes>"
 export CHUTES_API_URL="https://llm.chutes.ai/v1/chat/completions"
 export CHUTES_MODEL="deepseek-ai/DeepSeek-V3.2-TEE"
 python -m uvicorn app.main:app --reload
@@ -88,9 +110,10 @@ http://127.0.0.1:8000
 
 Stop the server with `Ctrl + C`.
 
-> **Note on the API key:** the key is NOT stored in this repository,
-> for security. Without it the app still runs — the AI features use a
-> built-in deterministic fallback instead of live AI.
+> **Important:** the environment variables and the server must be set
+> in the **same terminal window**. If the AI features show "offline
+> mode" while you expect live AI, the key was not set, or was set in a
+> different window than the one running the server.
 
 ---
 
@@ -155,9 +178,10 @@ treasury-ai/
 **`python` is not recognized** — Python is not on PATH. Reinstall
 Python and tick "Add Python to PATH".
 
-**AI features show "offline mode"** — the API key is not set, or was
-set in a different terminal window than the one running the server.
-Set all three variables, then start the server in the SAME window.
+**AI features show "offline mode"** — no API key is set (the app still
+works — this is the deterministic fallback). To enable live AI, set
+all three `CHUTES_...` variables, then start the server in the SAME
+terminal window.
 
 **Page won't load** — confirm the terminal says
 `Application startup complete`, and visit `http://127.0.0.1:8000`.
